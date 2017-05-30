@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	package="peter1303.material.MaterialDesignDialog"
+	android:versionCode="16"
+	android:versionName="1.2.8">
+
+	<uses-sdk
+		android:minSdkVersion="9"
+		android:targetSdkVersion="22"/>
+
+</manifest>
+

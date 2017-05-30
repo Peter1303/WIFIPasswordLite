@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:id="@+id/WIFILAYOUT">
+
+	<LinearLayout
+		android:background="?android:attr/selectableItemBackground"
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="vertical"
+		android:gravity="left|center"
+		android:padding="16dp"
+		android:id="@+id/card_LinearLayout">
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:orientation="horizontal"
+			android:gravity="center">
+
+			<LinearLayout
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="vertical"
+				android:layout_weight="1.0">
+
+				<LinearLayout
+					android:layout_height="wrap_content"
+					android:layout_width="match_parent"
+					android:orientation="horizontal"
+					android:gravity="left|center">
+
+					<TextView
+						android:layout_height="wrap_content"
+						android:text="名称："
+						android:layout_width="wrap_content"
+						android:textColor="@color/default_text"
+						android:textSize="14sp"/>
+
+					<TextView
+						android:layout_height="wrap_content"
+						android:textColor="@color/default_text"
+						android:textSize="14sp"
+						android:ellipsize="end"
+						android:layout_width="match_parent"
+						android:id="@+id/WIFISSID"
+						android:singleLine="true"
+						android:layout_weight="1.0"/>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:orientation="horizontal"
+					android:gravity="left|center">
+
+					<TextView
+						android:layout_height="wrap_content"
+						android:text="密码："
+						android:textSize="14sp"
+						android:layout_width="wrap_content"
+						android:textColor="@color/default_text"/>
+
+					<TextView
+						android:layout_height="wrap_content"
+						android:textColor="@color/default_text"
+						android:textSize="14sp"
+						android:ellipsize="end"
+						android:layout_width="wrap_content"
+						android:id="@+id/WIFIPSG"
+						android:singleLine="true"/>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_height="wrap_content"
+					android:layout_width="match_parent"
+					android:orientation="horizontal"
+					android:gravity="top|left">
+
+					<TextView
+						android:layout_height="wrap_content"
+						android:text="加密方式："
+						android:textSize="12sp"
+						android:layout_width="wrap_content"
+						android:textColor="@color/alpha_text"/>
+
+					<TextView
+						android:layout_height="wrap_content"
+						android:textColor="@color/alpha_text"
+						android:textSize="12sp"
+						android:layout_width="match_parent"
+						android:id="@+id/WIFIMGMT"
+						android:layout_weight="1.0"/>
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_height="match_parent"
+				android:layout_width="wrap_content"
+				android:orientation="horizontal"
+				android:gravity="center"
+				android:id="@+id/WIFICheckBoxLayout">
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</LinearLayout>
+
