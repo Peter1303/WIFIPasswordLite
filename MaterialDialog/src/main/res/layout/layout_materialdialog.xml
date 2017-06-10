@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:orientation="vertical"
+	android:layout_gravity="center"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+
+	<LinearLayout
+		android:id="@+id/material_background"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:background="@drawable/material_card"
+		android:layout_marginRight="10dp"
+		android:layout_marginLeft="10dp">
+
+		<LinearLayout
+			android:layout_weight="1"
+			android:id="@+id/contentView"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+			<TextView
+				android:textColor="#000000"
+				android:textSize="20sp"
+				android:id="@+id/material_title"
+				android:text="标题"
+				android:layout_marginLeft="16dp"
+				android:layout_marginTop="16dp"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"/>
+
+			<ScrollView
+				android:layout_weight="1"
+				android:id="@+id/message_content_root"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				tools:layout_height="700dp">
+
+				<LinearLayout
+					android:id="@+id/message_content_view"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+
+					<TextView
+						android:id="@+id/material_message"
+						android:textColor="#000000"
+						android:textSize="16sp"
+						android:lineSpacingMultiplier="1.3"
+						android:text="消息"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="16dp"
+						android:layout_marginRight="16dp"
+						android:layout_marginTop="16dp"/>
+
+				</LinearLayout>
+
+			</ScrollView>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+			android:orientation="horizontal"
+			android:id="@+id/buttonLayout">
+
+			<Button
+				android:layout_height="35dp"
+				android:text="第三"
+				android:textColor="@color/alert_color"
+				android:layout_width="wrap_content"
+				android:textSize="15sp"
+				android:background="@drawable/button"
+				android:layout_marginLeft="16dp"
+				android:id="@+id/material_Neutral"
+				android:layout_marginTop="16dp"
+				android:layout_marginBottom="16dp"/>
+
+			<LinearLayout
+				android:gravity="right|center"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_marginRight="16dp">
+
+				<Button
+					android:text="取消"
+					android:textSize="15sp"
+					android:textColor="@color/alert_color"
+					android:background="@drawable/button"
+					android:layout_width="wrap_content"
+					android:layout_height="35dp"
+					android:id="@+id/material_Negative"
+					android:layout_marginTop="16dp"
+					android:layout_marginBottom="16dp"/>
+
+				<Button
+					android:text="确定"
+					android:textSize="15sp"
+					android:textColor="@color/alert_color"
+					android:background="@drawable/button"
+					android:layout_width="wrap_content"
+					android:layout_height="35dp"
+					android:id="@+id/material_Positive"
+					android:layout_marginTop="16dp"
+					android:layout_marginBottom="16dp"/>
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</LinearLayout>
+
