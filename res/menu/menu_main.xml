@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+	
+	<item
+		android:id="@+id/action_refresh"
+		android:title="刷新"
+		android:showAsAction="always|withText"/>
+	
+</menu>
+
+
