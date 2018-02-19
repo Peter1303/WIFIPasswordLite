@@ -1,13 +1,10 @@
 package com.wifi.password2.activity;
 
 import android.app.Activity;
-import android.content.ClipData;
+import android.app.AlertDialog;
 import android.content.ClipboardManager;
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
-import android.os.AsyncTask;
-import android.os.Build;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -15,32 +12,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.view.WindowManager;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import com.wifi.password2.R;
-import com.wifi.password2.activity.MainActivity;
 import com.wifi.password2.utils.AppUtils;
 import com.wifi.password2.wifi.WiFiHandler;
 import com.wifi.password2.wifi.WiFiItem;
 import java.util.ArrayList;
 import java.util.List;
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpStatus;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.util.EntityUtils;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 
 public class MainActivity extends Activity {
 	//主布局
@@ -73,12 +54,12 @@ public class MainActivity extends Activity {
 		mainEmpty = (TextView) findViewById(R.id.activity_main_TextView);
 		listView = (ListView) findViewById(R.id.activity_main_ListView);
 	}
-	
+
 	private void setUpListView() {
 		adapter = new WifiAdapter();
 		listView.setAdapter(adapter);
 	}
-	
+
 	private void load() {
 		wifiHandler = new WiFiHandler();
 		try {
@@ -95,7 +76,7 @@ public class MainActivity extends Activity {
 		}
 		adapter.notifyDataSetChanged();
 	}
-	
+
 	private class WifiAdapter extends BaseAdapter {
 		public WifiAdapter() {
 		}
@@ -166,18 +147,18 @@ public class MainActivity extends Activity {
 									}
 								}
 							})
-						.show();
+							.show();
 					}
 				});
 			return convertView;
 		}
 	}
-	
+
 	private void Clickboard(String copy) {
 		ClipboardManager clickboard = (ClipboardManager)getSystemService(Context.CLIPBOARD_SERVICE); 
 		clickboard.setText(copy);
 	}
-	
+
 	@Override
     public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.menu_main, menu);
